@@ -4,7 +4,7 @@ services:
     image: markwatsonatx/spark-notebook-ml:2.1.1    
     volumes:
       - ./src/data:/usr/data
-      - ./src/models:/usr/models
+      - ./models:/usr/models
       - ./notebooks:/usr/notebooks
     ports:
       - "38889:8889"
@@ -12,8 +12,8 @@ services:
     image: markwatsonatx/flask-alpine-sklearn:latest
     volumes:
       - ./startup:/usr/startup
+      - ./models:/usr/models
       - ./src/app:/usr/src/app
-      - ./src/models:/usr/models
     working_dir: /usr/src/app
     command: /usr/startup/startup.sh
     ports:
