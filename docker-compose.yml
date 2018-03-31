@@ -1,0 +1,20 @@
+version: '3'
+services:
+  sklearn:
+    image: markwatsonatx/spark-notebook-ml:2.1.1    
+    volumes:
+      - ./src/data:/usr/data
+      - ./src/models:/usr/models
+      - ./notebooks:/usr/notebooks
+    ports:
+      - "38889:8889"
+  web:
+    image: markwatsonatx/flask-alpine-sklearn:latest
+    volumes:
+      - ./startup:/usr/startup
+      - ./src/app:/usr/src/app
+      - ./src/models:/usr/models
+    working_dir: /usr/src/app
+    command: /usr/startup/startup.sh
+    ports:
+      - "35000:5000"

@@ -1,0 +1,16 @@
+{
+  "editor" : {
+    "hide": false,
+    "srcDir": "src" 
+  },
+  "proxy": {
+    "ports": [
+      {
+        "port": 38889,
+        "hide": false,
+        "name": "Notebook",
+        "path": "/notebooks/HousePrices.ipynb"
+      }
+    ]
+  }
+}
