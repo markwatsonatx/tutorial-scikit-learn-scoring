@@ -1,0 +1,14 @@
+disabled: false
+metadata:
+  editorTab:
+    hide: false
+    srcDir: "src"
+  appTabs:
+  - port: 38889
+    hide: false
+    name: "Notebook"
+    path: "/notebooks/HousePrices.ipynb"
+  - port: 35000
+    hide: false
+    name: "Web App"
+    path: "/"
