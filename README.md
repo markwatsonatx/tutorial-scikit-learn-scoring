@@ -12,3 +12,6 @@ After running `docker-compose up -d` you can access the sample notebook at [http
 
 
 You can access the sample Flask app at [http://DOCKER-HOST-IP:35000/index.html](http://localhost:35000/index.html).
+
+### minienv
+
